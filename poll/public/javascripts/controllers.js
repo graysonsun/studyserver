@@ -1,9 +1,9 @@
 // Managing the poll list
-function PollListCtrl($scope) {
+function PollListCtrl($scope,Poll) {
     $scope.polls = Poll.query();
 }
 // Voting / viewing poll results
-function PollItemCtrl($scope, $routeParams) {
+function PollItemCtrl($scope, $routeParams,Poll) {
     $scope.poll = Poll.get({
         pollId: $routeParams.pollId
     });
